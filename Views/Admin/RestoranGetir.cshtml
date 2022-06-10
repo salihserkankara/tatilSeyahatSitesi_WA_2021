@@ -1,0 +1,24 @@
+﻿@model TravelTripProject.Models.Siniflar.Restoranlar
+@{
+    ViewBag.Title = "RestoranGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>RestoranGetir</h2>
+<br />
+@using (Html.BeginForm("RestoranGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Image)
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Restoran Güncelle</button>
+}

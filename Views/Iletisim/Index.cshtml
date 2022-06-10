@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+    string url = "https://www.google.com.tr/maps/place/Tepek%C3%B6y,+%C5%9Eanl%C4%B1+Sk.+No:57,+41060+%C4%B0zmit%2FKocaeli/@40.799988,29.9766373,17z/data=!3m1!4b1!4m5!3m4!1s0x14cb51d99c34cf6d:0x9dd3325ac1478868!8m2!3d40.799988!4d29.978826";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | Contact :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact-top">
+                <h3>İletişim Bilgileri</h3>
+                <p>Tatil & Seyahat Blog Sitesi bilgileri yer almaktadır. Site yönetimine dilek, öneri ve şikayetlerinizi, aşağıda yer alan formumuzu doldurarak gönderebilirsiniz.</p>
+            </div>
+            <div class="contact-bottom">
+                <div class="contact-left">
+                    <div class="contact-add">
+                        <h3>Adres</h3>
+                        <p>Tepeköy Mh. Şanlı Sk. 187. Ada, F8 B Blok, Dış Kapı No:57/A, İç Kapı No:3, Bayındırlık Kalıcı Konutları, İzmit / Kocaeli</p>
+                        <p>Telefon: +90 554 791 5131</p>
+                        <p>Email:<a href="mailto:191307088@kocaeli.edu.tr">191307088@kocaeli.edu.tr</a></p>
+                    </div>
+                    <div class="contact-add">
+                        <h3>Adres 2</h3>
+                        <p>Kocaeli Üniversitesi Umuttepe Yerleşkesi Teknoloji Fakültesi Bilişim Sistemleri Mühendisliği</p>
+                        <p>Telefon: +90 262 303 2202</p>
+                        <p>Faks: +90 262 303 2203</p>
+                        <p>Email:<a href="mailto:bilisim@kocaeli.edu.tr">bilisim@kocaeli.edu.tr</a></p>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    @*<iframe width="580" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="@url"></iframe>*@
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.273288404331!2d29.976637315407583!3d40.79998797932239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb51d99c34cf6d%3A0x9dd3325ac1478868!2zVGVwZWvDtnksIMWeYW5sxLEgU2suIE5vOjU3LCA0MTA2MCDEsHptaXQvS29jYWVsaQ!5e0!3m2!1str!2str!4v1639219891500!5m2!1str!2str" width="580" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <br>
+                    <small>
+                        <a href="@url" target="_blank" style="color: #555; text-align:left">Daha Büyük Haritada Görüntüle</a>
+                    </small>
+                </div>
+                <div class="clear"></div>
+            </div>
+            @Html.Action("MesajGonder", "Iletisim")
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</body>
+</html>

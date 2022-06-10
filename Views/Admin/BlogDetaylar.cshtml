@@ -1,0 +1,31 @@
+﻿@model TravelTripProject.Models.Siniflar.Blog
+
+@{
+    ViewBag.Title = "BlogDetaylar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>BlogDetaylar</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <td>@Model.ID</td>
+    </tr>
+    <tr>
+        <th>BAŞLIK</th>
+        <td>@Model.Baslik</td>
+    </tr>
+    <tr>
+        <th>TARİH</th>
+        <td>@Model.Tarih.ToString("d")</td>
+    </tr>
+    <tr>
+        <th>AÇIKLAMA</th>
+        <td>@Model.Aciklama</td>
+    </tr>
+    <tr>
+        <th>GÖRSEL</th>
+        <td>@Model.BlogImage</td>
+    </tr>
+</table>

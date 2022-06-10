@@ -1,0 +1,30 @@
+﻿@using TravelTripProject.Models.Siniflar
+@model List<Restoranlar>
+
+@{
+    ViewBag.Title = "Restoranlar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Restoranlar</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>DETAYLAR</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.ID</td>
+        <td>@x.Baslik</td>
+        <td><a href="/Admin/RestoranSil/@x.ID" class="btn btn-danger">SİL</a></td>
+        <td><a href="/Admin/RestoranGetir/@x.ID" class="btn btn-warning">GÜNCELLE</a></td>
+        <td><a href="/Admin/RestoranDetaylar/@x.ID" class="btn btn-default">DETAYLAR</a></td>
+    </tr>
+    }
+</table>
+<a href="/Admin/YeniRestoran/" class="btn btn-primary">Yeni Restoran</a>

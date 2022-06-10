@@ -1,0 +1,29 @@
+﻿@using TravelTripProject.Models.Siniflar
+@model List<Iletisim>
+
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Iletisim</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>AdSoyad</th>
+        <th>Mail</th>
+        <th>Telefon</th>
+        <th>Mesaj</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.ID</td>
+        <td>@x.AdSoyad</td>
+        <td>@x.Mail</td>
+        <td>@x.Konu</td>
+        <td>@x.Mesaj</td>
+    </tr>
+    }
+</table>
